@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1c2b4a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<title>Escrevente TJSP · Cronograma de Estudos</title><link id="fav" rel="icon"><link id="mf" rel="manifest">
+<style>
+:root{--bg:#f6f8fb;--c:#fff;--ink:#1c2b4a;--mu:#68738a;--gd:#a9832f;--ln:#e3e8f0;--g:#43a874;--y:#e5b53b;--r:#d9605a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:0;font-weight:600}h1{font-size:20px}h2{font-size:22px;margin:22px 0 8px}h3{font-size:16px;margin:0 0 8px}
+header{background:#fff;border-bottom:1px solid var(--ln);position:sticky;top:0;z-index:5}
+.hd{max-width:1000px;margin:auto;padding:10px 16px 4px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#lg svg{width:42px;height:42px;display:block}.hd small,.mu,.it small{color:var(--mu)}.ln{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.ln a,.btn,.sm{border:1px solid var(--gd);color:#7a5f1f;background:#fff;border-radius:99px;padding:6px 14px;font:inherit;font-size:13px;text-decoration:none;cursor:pointer}
+.ln a:hover,.btn:hover,.sm:hover{background:#faf4e3}.btn.p{background:var(--ink);color:#fff;border-color:var(--ink)}.sm{padding:2px 10px;font-size:12px}
+nav{max-width:1000px;margin:auto;display:flex;gap:2px;overflow-x:auto;padding:0 10px}
+nav button{border:0;background:none;padding:9px 12px;font:inherit;color:var(--mu);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button.on{color:var(--ink);border-color:var(--gd);font-weight:600}
+main{max-width:1000px;margin:auto;padding:6px 16px 60px}
+.card{background:var(--c);border:1px solid var(--ln);border-radius:12px;padding:16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.big{font:600 34px Georgia,serif;line-height:1.1;display:block}
+.it{display:flex;gap:10px;align-items:center;border-left:4px solid var(--ln);background:#f9fafc;border-radius:8px;padding:8px 10px;margin:6px 0}
+.it small{display:block;font-size:12px}.it>div{flex:1}.it.done{opacity:.6}
+.tag{background:#f3ecd6;color:#6f561b;border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600}
+.dots{display:flex;gap:5px}.dt{width:15px;height:15px;border-radius:50%;opacity:.3;cursor:pointer;border:2px solid transparent}.dt.on{opacity:1;border-color:var(--ink)}
+.dh{display:flex;align-items:center;gap:10px;margin-top:16px}.dh span{color:var(--mu);margin-right:auto}
+input,select{font:inherit;border:1px solid var(--ln);border-radius:8px;padding:6px 8px;background:#fff;max-width:100%}input[type=checkbox]{width:18px;height:18px;accent-color:var(--ink)}
+label{display:flex;flex-direction:column;font-size:13px;color:var(--mu);gap:3px}label.in{flex-direction:row;align-items:center;gap:5px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid var(--ln);padding:7px 6px;text-align:left;vertical-align:top}.sc{overflow-x:auto}
+.bar{height:9px;background:#e9edf4;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#d2b56c,var(--gd))}
+.warn{background:#fff6e0;border:1px solid #ecd48c;border-radius:10px;padding:10px 14px;margin:12px 0}
+.pen{background:var(--ink);color:#fff;border-radius:14px;padding:20px;border:3px solid var(--gd);margin:12px 0}.pen b.big{color:#e9cf8a}.pen p{margin:6px 0}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cl{min-height:60px;border:1px solid var(--ln);border-radius:8px;padding:3px 4px;font-size:11px;cursor:pointer;background:#fff}
+.cl.td{border-color:var(--gd)}.cl.sl{background:#faf4e3}.cl em{display:block;font-style:normal}.cl b{font-weight:600}.h7{font-size:12px;color:var(--mu);text-align:center}
+.n1{color:#2c7a52}.n7{color:#946f10}.n30{color:#b5483f}
+.bd{border:1px solid var(--ln);border-radius:99px;padding:2px 9px;background:#fff;font-size:12px;cursor:pointer}.bd.ok{background:#e4f4ea;border-color:#9fd1b3}.bd.late{background:#fde8e6;border-color:#e3a49f}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}.lg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--mu)}.lg i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:4px}
+.chip{border-radius:99px;padding:2px 10px;font-size:12px;font-weight:600}.c-g{background:#e4f4ea;color:#26623f}.c-y{background:#fbf0cd;color:#7a5a07}.c-r{background:#fde8e6;color:#9c3a33}
+ul{margin:6px 0;padding-left:20px}li{margin:3px 0}.bars{display:flex;gap:5px;align-items:flex-end;height:110px}.bars div{flex:1;text-align:center;font-size:10px;color:var(--mu)}.bars i{display:block;background:var(--gd);border-radius:4px 4px 0 0;min-height:2px}
+:focus-visible{outline:2px solid var(--gd);outline-offset:2px}
+</style></head><body>
+<header><div class="hd"><span id="lg"></span><div><h1>Escrevente TJSP</h1><small>Cronograma rumo à prova de 14/03/2027</small></div>
+<div class="ln"><a href="https://joomiguellr.github.io/CRONOGRAMA-LEI-SECA/" target="_blank" rel="noopener">Lei Seca</a><a href="https://joomiguellr.github.io/SUMULAS-REPETITIVOS/" target="_blank" rel="noopener">Súmulas e Repetitivos</a></div></div><nav id="nav"></nav></header>
+<main id="main"></main>
+<script>
+const LOGO='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1c2b4a"/><path d="M32 11 53 24H11Z" fill="#dcc17b"/><rect x="13" y="27" width="38" height="3" fill="#dcc17b"/><rect x="17" y="33" width="6" height="15" fill="#dcc17b"/><rect x="29" y="33" width="6" height="15" fill="#dcc17b"/><rect x="41" y="33" width="6" height="15" fill="#dcc17b"/><rect x="12" y="50" width="40" height="4" fill="#dcc17b"/></svg>';
+const DS={LP:['Língua Portuguesa','#3b6fb6'],RD:['Redação (discursiva)','#7d8798'],PE:['Direito Penal','#8b5a9e'],PP:['Processual Penal','#b0507a'],PC:['Processual Civil','#c0763a'],CF:['Constitucional','#2f8f83'],AD:['Administrativo','#6b9130'],LI:['Legislação Interna','#8a7430'],AT:['Atualidades','#cc5d5d'],MA:['Matemática','#3d86b0'],IN:['Informática','#5b6fc2'],RL:['Raciocínio Lógico','#46906c']};
+const TP=`LP|Interpretação e compreensão de textos (verbais, não verbais, literários e não literários)|3
+LP|Informações literais, inferências e ponto de vista do autor|2
+LP|Estruturação do texto: relações entre ideias e coesão|2
+LP|Significação contextual, sinônimos, antônimos, sentido próprio e figurado|2
+LP|Classes de palavras: emprego e sentido (substantivo a conjunção)|3
+LP|Concordância verbal e nominal|2
+LP|Regência verbal e nominal|2
+LP|Colocação pronominal|1
+LP|Crase|1
+LP|Pontuação|2
+RD|Redação dissertativo-argumentativa (treino da prova discursiva)|3
+PE|CP arts. 293–305, 307, 308 e 311-A (falsidades)|2
+PE|CP arts. 312–317 e 319–327 (crimes de funcionário público)|2
+PE|CP arts. 328–333, 336 e 337 (crimes de particular contra a Administração)|2
+PE|CP arts. 339–347, 357 e 359 (Administração da Justiça e outros)|2
+PP|CPP arts. 251–258, 261–267 e 274 (juiz, MP, acusado, defensor, serventuários)|2
+PP|CPP arts. 351–372 (citações e intimações)|2
+PP|CPP arts. 394–497 (procedimentos comum e do júri)|4
+PP|CPP arts. 531–538 e 541–548|1
+PP|CPP arts. 574–667 (recursos)|3
+PP|Lei 9.099/95, arts. 60–83, 88 e 89 (Juizados Criminais)|2
+PC|CPC arts. 144–155 (impedimento, suspeição e auxiliares da justiça)|1
+PC|CPC arts. 188–275 (atos processuais, prazos e comunicação)|4
+PC|CPC arts. 294–311 (tutela provisória)|2
+PC|CPC arts. 318–368 (procedimento comum até o julgamento conforme o estado)|3
+PC|CPC arts. 369–484 (provas e audiência)|4
+PC|CPC arts. 485–538 (sentença, coisa julgada e cumprimento de sentença)|4
+PC|CPC arts. 994–1026 (recursos)|3
+PC|Lei 9.099/95, arts. 3º–19 (Juizados Cíveis)|2
+PC|Lei 12.153/2009 (Juizados da Fazenda Pública)|1
+CF|CF Título II, Cap. I (art. 5º: direitos e deveres individuais e coletivos)|3
+CF|CF Título II, Caps. II e III (direitos sociais e nacionalidade)|2
+CF|CF Título III, Cap. VII, Seções I e II (Administração Pública e servidores)|2
+CF|CF art. 92 (órgãos do Poder Judiciário)|1
+AD|Lei 10.261/68, arts. 1º–86 (Estatuto dos Funcionários Públicos de SP)|3
+AD|Lei 10.261/68, arts. 171–175 e 239–323|3
+AD|Lei 8.429/92 (Improbidade Administrativa)|2
+LI|Resolução TJSP 850/2021 (teletrabalho)|1
+LI|Resolução TJSP 963/2025 (governança e uso do eproc)|1
+LI|Lei Complementar 1.111/2010 (Plano de Cargos e Carreiras)|2
+LI|Regimento Interno do TJSP|3
+LI|NSCGJ Tomo I: Cap. II (Seção I, subseções I e II) e Cap. III (Seções I, II, V, VI e VII)|3
+LI|NSCGJ Tomo I: Cap. III (Seção VIII, subseções I a III; Seções IX a XIX)|3
+LI|NSCGJ Tomo I: Cap. XI (Seções I a VII)|2
+AT|Atualidades (fatos a partir do 1º semestre de 2026)|2
+AT|Lei 13.146/2015 (Estatuto da Pessoa com Deficiência), arts. 1º–13 e 34–38|1
+MA|Operações com reais, MMC e MDC|1
+MA|Razão, proporção, porcentagem e regra de três (simples e composta)|2
+MA|Médias aritmética simples e ponderada; juros simples|1
+MA|Equações do 1º e 2º graus e sistemas do 1º grau|2
+MA|Relação entre grandezas, tabelas, gráficos e sistemas de medidas|1
+MA|Geometria (perímetro, área, volume, ângulo, Pitágoras) e situações-problema|2
+IN|MS-Windows 10+ (pastas, arquivos, atalhos, menus)|1
+IN|MS-Word (Microsoft 365)|2
+IN|MS-Excel (fórmulas, funções, gráficos, macros)|3
+IN|Correio eletrônico e Internet|1
+IN|MS Teams e OneDrive|1
+RL|Estruturas lógicas e lógica de argumentação|3
+RL|Diagramas lógicos e relações arbitrárias entre pessoas, lugares e eventos|2
+RL|Sequências numéricas e figurais|2`.split('\n').map((l,i)=>{const[d,n,h]=l.split('|');return{id:i,d,n,h:+h}});
+const $=s=>document.querySelector(s),p2=n=>String(n).padStart(2,'0'),KEY='escTJSP1',EXAM='2027-03-14',WN=['dom','seg','ter','qua','qui','sex','sáb'];
+const T=()=>{const d=new Date();return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())};
+const U=s=>new Date(s+'T00:00:00Z'),add=(s,n)=>new Date(U(s).getTime()+n*864e5).toISOString().slice(0,10),diff=(a,b)=>Math.round((U(b)-U(a))/864e5),fm=s=>s.split('-').reverse().join('/'),fs=s=>fm(s).slice(0,5),wd=s=>U(s).getUTCDay();
+const ls={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+const def={start:T(),end:'2027-03-13',hours:3,cycles:2,rev:true,rest:[],goal:20,done:{},rv:{},skip:{},extra:{},dif:{},q:{},sim:[]};
+let S=Object.assign({},def,JSON.parse(ls.g(KEY)||'{}')),V={t:'ini',n:14,c:1,m:T().slice(0,7),sel:null};
+const save=()=>{ls.s(KEY,JSON.stringify(S));render()};
+const DC={f:['Fácil / dominado','var(--g)'],m:['Médio','var(--y)'],d:['Difícil','var(--r)']},RH={1:.2,7:.15,30:.1},RL={1:'24h',7:'7 dias',30:'30 dias'};
+const dots=id=>`<span class="dots">${Object.keys(DC).map(x=>`<i class="dt${S.dif[id]==x?' on':''}" style="background:${DC[x][1]}" title="${DC[x][0]}" onclick="sd(${id},'${x}')"></i>`).join('')}</span>`;
+const dcol=id=>S.dif[id]?DC[S.dif[id]][1]:'var(--ln)';
+const leg=()=>`<div class="lg">${Object.values(DC).map(v=>`<span><i style="background:${v[1]}"></i>${v[0]}</span>`).join('')}<span><i style="background:var(--ln)"></i>Sem classificação</span></div>`;
+const sd=(id,x)=>{S.dif[id]=S.dif[id]==x?'':x;save()};
+const tn=k=>{if(S.done[k]){delete S.done[k];[1,7,30].forEach(n=>delete S.rv[k+'|'+n])}else S.done[k]=T();save()};
+const tr=(k,n)=>{const x=k+'|'+n;if(S.rv[x])delete S.rv[x];else S.rv[x]=T();save()};
+const tg=(w,d)=>{if(S[w][d])delete S[w][d];else S[w][d]=1;save()};
+const isStudy=d=>!S.skip[d]&&(!S.rest.includes(wd(d))||S.extra[d]);
+const revs=()=>{const a=[];if(!S.rev)return a;for(const k in S.done){const t=TP[+k.split(':')[1]];[1,7,30].forEach(n=>a.push({k,t,n,due:add(S.done[k],n),done:S.rv[k+'|'+n]}))}return a};
+function plan(){const td=T(),st=S.start>td?S.start:td,q=[],days={};
+ for(let c=1;c<=S.cycles;c++)TP.forEach(t=>{const k=c+':'+t.id;if(!S.done[k])q.push({k,t,c})});
+ const rv=revs().filter(r=>!r.done).map(r=>({...r,h:r.t.h*RH[r.n]}));let d=st,last=null,g=0;
+ while((q.length||rv.some(r=>!r.p&&r.due<=S.end))&&g++<1500){
+  if(isStudy(d)){const it=[];let ld=0,nn=0;
+   rv.forEach(r=>{if(!r.p&&r.due<=d&&r.due<=S.end){r.p=1;it.push({r:1,...r});ld+=r.h}});
+   while(q.length&&ld<S.hours-.01&&(!nn||ld+q[0].t.h<=S.hours+.01)){const u=q.shift();it.push(u);ld+=u.t.h;nn++;if(S.rev)[1,7,30].forEach(n=>rv.push({k:u.k,t:u.t,n,due:add(d,n),sd:d,h:u.t.h*RH[n]}))}
+   if(it.length){days[d]=it;last=d}}
+  d=add(d,1)}
+ return{days,last,st}}
+function warn(P){if(!P.last||P.last<=S.end)return'';let R=0,A=0;for(const d in P.days)P.days[d].forEach(i=>R+=i.r?i.h:i.t.h);for(let d=P.st;d<=S.end;d=add(d,1))if(isStudy(d))A++;
+ return`<div class="warn"><b>O conteúdo não cabe no período.</b> No ritmo atual ele termina em ${fm(P.last)}, depois da véspera da prova. ${A?`Para caber, estude cerca de ${Math.ceil(R/A*2)/2}h por dia, `:''}reduza os ciclos ou desative a revisão.</div>`}
+const row=(it,d)=>{const t=it.t,s=DS[t.d][0];
+ if(it.r)return`<div class="it" style="border-left-color:${dcol(t.id)}"><input type="checkbox" ${S.done[it.k]?'':'disabled'} onchange="tr('${it.k}',${it.n})"><div><span class="tag">Revisão de ${RL[it.n]}</span> ${t.n}<small>${s}, ${S.done[it.k]?'estudado em '+fm(S.done[it.k]):'previsto após estudar em '+fm(it.sd)}${it.due<d?' (atrasada)':''}</small></div>${dots(t.id)}</div>`;
+ return`<div class="it" style="border-left-color:${DS[t.d][1]}"><input type="checkbox" onchange="tn('${it.k}')"><div>${t.n}<small>${s}${S.cycles>1?', ciclo '+it.c:''}, ${t.h}h</small></div>${dots(t.id)}</div>`};
+const doneToday=()=>{const td=T();let h='';for(const k in S.done)if(S.done[k]==td){const t=TP[+k.split(':')[1]];h+=`<div class="it done" style="border-left-color:${DS[t.d][1]}"><input type="checkbox" checked onchange="tn('${k}')"><div>${t.n}<small>Estudado hoje</small></div>${dots(t.id)}</div>`}
+ for(const x in S.rv)if(S.rv[x]==td){const[k,n]=x.split('|'),t=TP[+k.split(':')[1]];h+=`<div class="it done" style="border-left-color:${dcol(t.id)}"><input type="checkbox" checked onchange="tr('${k}',${n})"><div><span class="tag">Revisão de ${RL[n]}</span> ${t.n}<small>Revisado hoje</small></div></div>`}return h};
+function dayCard(d,items){const td=T(),h=(items||[]).reduce((s,i)=>s+(i.r?i.h:i.t.h),0),rest=S.rest.includes(wd(d));let b='',body='';
+ if(S.skip[d]){b=`<button class="sm" onclick="tg('skip','${d}')">Retomar</button>`;body='<small class="mu">Dia pulado. O conteúdo foi para o próximo dia de estudo.</small>'}
+ else if(rest&&!S.extra[d]){b=`<button class="sm" onclick="tg('extra','${d}')">Estudar neste dia</button>`;body='<small class="mu">Dia de descanso.</small>'}
+ else{b=(rest?`<button class="sm" onclick="tg('extra','${d}')">Voltar ao descanso</button> `:'')+`<button class="sm" onclick="tg('skip','${d}')">Pular dia</button>`;body=(d==td?doneToday():'')+(items&&items.length?items.map(i=>row(i,d)).join(''):(d==td&&doneToday()?'':'<small class="mu">Nada previsto.</small>'))}
+ return`<div class="dh"><b>${d==td?'Hoje, ':''}${WN[wd(d)]} ${fs(d)}</b><span>${h?h.toFixed(1)+'h':''}</span>${b}</div>${body}`}
+const inp=(l,k,t,x='')=>`<label>${l}<input type="${t}" value="${S[k]}" ${x} onchange="cfg('${k}',this.value)"></label>`;
+function cfg(k,v){if(k=='rest'){const a=+v;S.rest=S.rest.includes(a)?S.rest.filter(x=>x!=a):[...S.rest,a];return save()}
+ if(k=='rev')v=!!v;else if(k=='hours')v=Math.max(.5,+v||3);else if(k=='cycles')v=Math.min(8,Math.max(1,Math.floor(+v)||1));else if(k=='goal')v=Math.max(1,Math.floor(+v)||20);else if(!v)return render();
+ S[k]=v;if(S.end<S.start)S.end=S.start;save()}
+function reset(){if(confirm('Reiniciar o cronograma? Os assuntos estudados, revisões e dias pulados serão apagados e o início volta para hoje. Simulados e questões são mantidos.')){S.start=T();S.done={};S.rv={};S.skip={};S.extra={};save()}}
+function exp(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='escrevente-backup.json';a.click()}
+function imp(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{S=Object.assign({},def,JSON.parse(r.result));save()}catch(e){alert('Arquivo inválido.')}};r.readAsText(f)}
+function vIni(){const td=T(),P=plan(),ex=diff(td,EXAM),tot=S.cycles*TP.length,dn=Object.keys(S.done).filter(k=>+k.split(':')[0]<=S.cycles).length,len=diff(S.start,S.end)+1,el=Math.min(len,Math.max(0,diff(S.start,td))),pc=Math.round(el/len*100),qn=(S.q[td]||{}).n||0,rp=revs().filter(r=>!r.done&&r.due<=td).length,it=P.days[td]||[];
+ const col=[24,53,82,111,140,169].map(x=>`<rect x="${x}" y="52" width="14" height="44"/>`).join('');
+ return`<div class="card" style="display:flex;gap:24px;flex-wrap:wrap;align-items:center"><svg viewBox="0 0 200 120" style="width:260px;max-width:100%;flex:none"><defs><g id="tp"><path d="M100 6 192 36H8Z"/><rect x="14" y="42" width="172" height="6"/>${col}<rect x="10" y="98" width="180" height="6"/><rect x="4" y="106" width="192" height="8"/></g><linearGradient id="gd" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#a9832f"/><stop offset="1" stop-color="#e2c981"/></linearGradient><clipPath id="cl"><rect x="0" y="${120-1.2*pc}" width="200" height="120"/></clipPath></defs><use href="#tp" fill="#e3e8f0"/><use href="#tp" fill="url(#gd)" clip-path="url(#cl)"/></svg>
+ <div style="flex:1;min-width:220px"><span class="mu">Faltam para a prova</span><b class="big">${ex>0?ex+' dias':ex==0?'É hoje':'Prova realizada'}</b><p class="mu" style="margin:4px 0 10px">Domingo, 14/03/2027, à tarde. O cronograma termina em ${fm(S.end)}.</p><div class="bar"><i style="width:${pc}%"></i></div><small class="mu">${pc}% do cronograma percorrido (dia ${Math.min(len,el+1)} de ${len})</small></div></div>${warn(P)}
+ <div class="grid"><div class="card"><span class="mu">Assuntos estudados</span><b class="big">${dn}/${tot}</b><small class="mu">${Math.round(dn/tot*100)}% do conteúdo em ${S.cycles} ciclo(s)</small></div>
+ <div class="card"><span class="mu">Questões hoje</span><b class="big">${qn}/${S.goal}</b><div class="bar"><i style="width:${Math.min(100,qn/S.goal*100)}%"></i></div></div>
+ <div class="card"><span class="mu">Revisões pendentes</span><b class="big">${rp}</b><small class="mu">${S.rev?'de 24h, 7 e 30 dias':'revisão desativada'}</small></div></div>
+ <h2>Hoje</h2><div class="card">${doneToday()}${it.length?it.map(i=>row(i,td)).join(''):'<span class="mu">'+(isStudy(td)?'Nada previsto para hoje.':'Hoje não é dia de estudo.')+'</span>'}</div>`}
+function vCro(){const P=plan(),td=T(),end=P.last&&P.last>S.end?P.last:S.end,tot=Math.min(diff(P.st,end)+1,V.n);let h=`<h2>Cronograma</h2><div class="card"><div class="row">${inp('Início dos estudos','start','date')}${inp('Fim (véspera da prova: 13/03/2027)','end','date',`max="2027-03-13"`)}${inp('Horas por dia','hours','number','min="0.5" step="0.5" style="width:90px"')}${inp('Ciclos','cycles','number','min="1" max="8" style="width:80px"')}${inp('Meta de questões por dia','goal','number','min="1" style="width:110px"')}</div>
+ <div class="row" style="margin-top:12px"><label class="in"><input type="checkbox" ${S.rev?'checked':''} onchange="cfg('rev',this.checked)"> Revisões de 24h, 7 e 30 dias</label><span class="mu">Dias de descanso:</span>${WN.map((w,i)=>`<label class="in"><input type="checkbox" ${S.rest.includes(i)?'checked':''} onchange="cfg('rest',${i})">${w}</label>`).join('')}</div>
+ <div class="row" style="margin-top:12px"><button class="btn" onclick="reset()">Reiniciar cronograma</button><button class="btn" onclick="exp()">Exportar backup</button><label class="btn" style="flex-direction:row;cursor:pointer">Importar backup<input type="file" accept=".json" hidden onchange="imp(this.files[0])"></label></div></div>${warn(P)}<div class="card">${leg()}`;
+ for(let i=0;i<tot;i++){const d=add(P.st,i);h+=dayCard(d,P.days[d])}
+ return h+(tot<diff(P.st,end)+1?`<p><button class="btn" onclick="V.n+=14;render()">Mostrar mais dias</button></p>`:'')+'</div>'}
+function vCon(){let h=`<h2>Conteúdo do edital</h2><div class="row"><span class="mu">Ciclo:</span>${Array.from({length:S.cycles},(_,i)=>`<button class="${V.c==i+1?'btn p':'btn'}" onclick="V.c=${i+1};render()">${i+1}</button>`).join('')}</div><div class="card">${leg()}`;
+ for(const d in DS){const L=TP.filter(t=>t.d==d),n=L.filter(t=>S.done[V.c+':'+t.id]).length;h+=`<div class="dh"><b>${DS[d][0]}</b><span>${n}/${L.length}</span></div>`+L.map(t=>{const k=V.c+':'+t.id;return`<div class="it" style="border-left-color:${DS[d][1]}"><input type="checkbox" ${S.done[k]?'checked':''} onchange="tn('${k}')"><div>${t.n}<small>${t.h}h${S.done[k]?', estudado em '+fm(S.done[k]):''}</small></div>${dots(t.id)}</div>`}).join('')}
+ return h+'</div>'}
+const mv=n=>{let[y,m]=V.m.split('-').map(Number);m+=n;if(m<1){m=12;y--}if(m>12){m=1;y++}V.m=y+'-'+p2(m);render()};
+function vRev(){const td=T(),R=revs(),map={};R.forEach(r=>(map[r.due]=map[r.due]||[]).push(r));const[y,m]=V.m.split('-').map(Number),off=wd(V.m+'-01'),nd=new Date(Date.UTC(y,m,0)).getUTCDate();
+ let c='';for(let i=0;i<off;i++)c+='<div></div>';
+ for(let d=1;d<=nd;d++){const ds=V.m+'-'+p2(d),L=map[ds]||[];c+=`<div class="cl${ds==td?' td':''}${V.sel==ds?' sl':''}" onclick="V.sel='${ds}';render()"><b>${d}</b>${[1,7,30].map(n=>{const a=L.filter(r=>r.n==n);return a.length?`<em class="n${n}">${n==1?'24h':n+'d'}: ${a.length}</em>`:''}).join('')}</div>`}
+ const sl=V.sel&&map[V.sel]||[],log=Object.keys(S.done).sort((a,b)=>S.done[b]<S.done[a]?-1:1);
+ return`<h2>Revisões e registros</h2>${S.rev?'':'<div class="warn">As revisões estão desativadas. Ative em Cronograma para agendar as revisões de 24h, 7 e 30 dias.</div>'}<div class="card"><div class="row" style="justify-content:space-between"><button class="sm" onclick="mv(-1)">Mês anterior</button><b>${['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'][m-1]} de ${y}</b><button class="sm" onclick="mv(1)">Próximo mês</button></div>
+ <div class="cal" style="margin-top:10px">${WN.map(w=>`<div class="h7">${w}</div>`).join('')}${c}</div>${V.sel?`<h3 style="margin-top:14px">Revisões em ${fm(V.sel)}</h3>${sl.length?sl.map(r=>`<div class="it" style="border-left-color:${dcol(r.t.id)}"><input type="checkbox" ${r.done?'checked':''} onchange="tr('${r.k}',${r.n})"><div><span class="tag">Revisão de ${RL[r.n]}</span> ${r.t.n}</div></div>`).join(''):'<span class="mu">Sem revisões neste dia.</span>'}`:''}</div>
+ <div class="card"><h3>Registro de estudo e revisão</h3>${log.length?`<div class="sc"><table><tr><th>Assunto</th><th>Estudado em</th><th>Revisões</th></tr>${log.map(k=>{const t=TP[+k.split(':')[1]];return`<tr><td><i style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${dcol(t.id)};margin-right:6px"></i>${t.n}${S.cycles>1?' (ciclo '+k.split(':')[0]+')':''}</td><td>${fm(S.done[k])}</td><td>${S.rev?[1,7,30].map(n=>{const due=add(S.done[k],n),dn=S.rv[k+'|'+n];return`<button class="bd ${dn?'ok':due<td?'late':''}" onclick="tr('${k}',${n})">${n==1?'24h':n+'d'} ${fs(due)}${dn?' ✓':''}</button> `}).join(''):'<span class="mu">desativada</span>'}</td></tr>`}).join('')}</table></div>`:'<span class="mu">Marque assuntos como estudados para ver o registro aqui.</span>'}</div>`}
+const CUT=[['07/12/2025','1ª RAJ: 6 circunscrições (lista geral)',6.29,7,'São Bernardo 6,29; Santo André 6,71; Osasco 6,43; Guarulhos 6,43; Mogi das Cruzes 7,00; Itapecerica 6,43. Nota da Capital não localizada. Mesmo formato do edital atual (70 questões e redação).'],
+['08/09/2024 (Capital reaplicada em 24/11)','Interior e Capital (lista geral)',6.8,7.7,'Capital 7,0; São José do Rio Preto 7,7 (maior); Dracena e Itapeva 6,8 (menores). Top 10 da Capital: 9,1 / 9,1 / 9,1 / 9,0 / 9,0 / 9,0 / 8,9 / 8,8 / 8,8 / 8,8. Segunda fase: digitação.'],
+['28/05/2023','Capital e circunscrições da 1ª RAJ (lista geral)',7.8,8.5,'Capital 7,8 (1.500 convocados, valor divulgado antes da retificação de set/2023); circunscrições de 8,0 (Itapecerica) a 8,5 (Santo André). Segunda fase: digitação.'],
+['2021','Capital e interior (lista geral)',6.5,8.6,'Menor: Presidente Venceslau 6,5. Maior: 8,6 na Capital segundo o Estratégia (o Nova Concursos cita Campinas 8,5). 845 vagas.']];
+const sim1=s=>{const bl=s.a!=null||s.b!=null||s.c!=null,t=s.tot,st=bl&&((s.a||0)<8||(s.b||0)<15)?['Eliminado por bloco (mín. 8 em Português e 15 em Direito)','c-r']:t<35?['Abaixo de 5,0','c-r']:['Habilitado'+(bl?'':' (sem dados dos blocos)'),'c-g'];return{pct:t/70*100,nota:t/7,st}};
+function addSim(){const g=i=>$('#'+i).value,n=x=>x===''?null:+x,s={n:g('sn')||'Simulado',d:g('sd')||T(),a:n(g('s1')),b:n(g('s2')),c:n(g('s3'))},t=n(g('st'));
+ if((s.a>16)||(s.b>30)||(s.c>24))return alert('Máximo de acertos: 16 em Português, 30 em Direito e 24 em Conhecimentos Gerais.');
+ s.tot=(s.a!=null||s.b!=null||s.c!=null)?(s.a||0)+(s.b||0)+(s.c||0):t;if(s.tot==null||isNaN(s.tot)||s.tot<0||s.tot>70)return alert('Informe os acertos por bloco ou o total (0 a 70).');S.sim.push(s);save()}
+function vSim(){const L=[...S.sim].sort((a,b)=>a.d<b.d?-1:1);
+ return`<h2>Simulados e provas anteriores</h2><div class="card"><div class="row"><label>Nome<input id="sn" placeholder="Ex.: Simulado 1" style="width:170px"></label><label>Data<input id="sd" type="date" value="${T()}"></label><label>Português (de 16)<input id="s1" type="number" min="0" max="16" style="width:90px"></label><label>Direito (de 30)<input id="s2" type="number" min="0" max="30" style="width:90px"></label><label>Gerais (de 24)<input id="s3" type="number" min="0" max="24" style="width:90px"></label><label>ou total (de 70)<input id="st" type="number" min="0" max="70" style="width:90px"></label><button class="btn p" onclick="addSim()">Calcular e salvar</button></div>
+ <p class="mu" style="margin-bottom:0">Prova de 70 questões com peso igual. Habilitação: nota mínima 5,0 (35 acertos), ao menos 50% em Português (8 de 16) e em Direito (15 de 30).</p></div>
+ ${L.length?`<div class="card sc"><table><tr><th>Simulado</th><th>Acertos</th><th>Aproveitamento</th><th>Nota</th><th>Situação</th><th></th></tr>${L.map(s=>{const r=sim1(s),i=S.sim.indexOf(s);return`<tr><td>${s.n}<br><small class="mu">${fm(s.d)}</small></td><td>${s.tot}/70${s.a!=null||s.b!=null||s.c!=null?`<br><small class="mu">Port. ${s.a??'-'}/16, Dir. ${s.b??'-'}/30, Ger. ${s.c??'-'}/24</small>`:''}</td><td><b>${r.pct.toFixed(1)}%</b></td><td>${r.nota.toFixed(2).replace('.',',')}</td><td><span class="chip ${r.st[1]}">${r.st[0]}</span></td><td><button class="sm" onclick="if(confirm('Remover?')){S.sim.splice(${i},1);save()}">Remover</button></td></tr>`}).join('')}</table></div>`:''}
+ <h2>Notas de corte dos últimos concursos</h2><div class="card sc"><table><tr><th>Prova</th><th>Corte (lista geral)</th><th>Aproveitamento</th><th>Detalhes</th></tr>${CUT.map(c=>`<tr><td><b>${c[0]}</b><br><small class="mu">${c[1]}</small></td><td>${String(c[2]).replace('.',',')} a ${String(c[3]).replace('.',',')}</td><td>${(c[2]*10).toFixed(0)}% a ${(c[3]*10).toFixed(0)}%<br><small class="mu">${Math.round(c[2]*7)} a ${Math.round(c[3]*7)} acertos de 70</small></td><td><small>${c[4]}</small></td></tr>`).join('')}</table>
+ <p class="mu"><small>O TJSP classifica por nota de corte em cada circunscrição, não por ranking geral; a lista dos 10 primeiros só foi localizada para a Capital em 2024. Valores reunidos de publicações da VUNESP e de portais especializados; confira o documento oficial antes de usar como meta. No edital atual a redação exige 24 de 40 pontos (60%), contra 20 de 40 em 2025.</small></p></div>`}
+function vDes(){const td=T(),g=S.goal,q=S.q[td]||{n:0,a:0};let st=0,d=td;if(!((S.q[d]||{}).n>=g))d=add(d,-1);while((S.q[d]||{}).n>=g){st++;d=add(d,-1)}
+ const D=Array.from({length:14},(_,i)=>add(td,i-13)),mx=Math.max(g,...D.map(x=>(S.q[x]||{}).n||0)),w7=D.slice(7).reduce((s,x)=>s+((S.q[x]||{}).n||0),0),tq=Object.values(S.q).reduce((s,x)=>s+x.n,0),ta=Object.values(S.q).reduce((s,x)=>s+(x.a||0),0),L=[...S.sim].sort((a,b)=>a.d<b.d?-1:1);
+ const pts=L.map((s,i)=>`${L.length>1?10+i*280/(L.length-1):150},${70-sim1(s).pct*.6}`).join(' ');
+ return`<h2>Desempenho</h2><div class="grid"><div class="card"><span class="mu">Questões hoje</span><b class="big">${q.n}/${g}</b><div class="bar"><i style="width:${Math.min(100,q.n/g*100)}%"></i></div></div><div class="card"><span class="mu">Últimos 7 dias</span><b class="big">${w7}</b><small class="mu">média de ${(w7/7).toFixed(1)} por dia</small></div><div class="card"><span class="mu">Dias seguidos com a meta</span><b class="big">${st}</b></div><div class="card"><span class="mu">Acerto nas questões</span><b class="big">${tq&&ta?Math.round(ta/tq*100)+'%':'-'}</b><small class="mu">${tq} questões registradas</small></div></div>
+ <div class="card"><h3>Registrar questões de hoje</h3><div class="row"><label>Feitas<input id="qn" type="number" min="0" style="width:90px"></label><label>Acertos (opcional)<input id="qa" type="number" min="0" style="width:90px"></label><button class="btn p" onclick="addQ()">Somar ao dia</button><button class="sm" onclick="if(confirm('Zerar as questões de hoje?')){delete S.q['${td}'];save()}">Zerar hoje</button></div></div>
+ <div class="card"><h3>Questões por dia (últimos 14 dias, meta ${g})</h3><div class="bars">${D.map(x=>{const n=(S.q[x]||{}).n||0;return`<div><i style="height:${n/mx*90}px;${n>=g?'':'opacity:.55'}"></i>${n}<br>${fs(x)}</div>`}).join('')}</div></div>
+ <div class="card"><h3>Conteúdo por matéria</h3>${Object.keys(DS).map(d=>{const L=TP.filter(t=>t.d==d),n=L.reduce((s,t)=>{for(let c=1;c<=S.cycles;c++)if(S.done[c+':'+t.id])s++;return s},0),tt=L.length*S.cycles;return`<div style="margin:8px 0"><div class="row" style="justify-content:space-between"><span>${DS[d][0]}</span><span class="mu">${n}/${tt}</span></div><div class="bar"><i style="width:${n/tt*100}%;background:${DS[d][1]}"></i></div></div>`}).join('')}</div>
+ <div class="card"><h3>Evolução nos simulados</h3>${L.length?`<svg viewBox="0 0 300 80" style="width:100%;max-width:520px"><line x1="0" y1="${70-42}" x2="300" y2="${70-42}" stroke="#d9605a" stroke-dasharray="4"/><text x="2" y="${66-42}" font-size="8" fill="#68738a">50%</text><polyline points="${pts}" fill="none" stroke="#a9832f" stroke-width="2"/>${L.map((s,i)=>`<circle cx="${L.length>1?10+i*280/(L.length-1):150}" cy="${70-sim1(s).pct*.6}" r="3" fill="#1c2b4a"/>`).join('')}</svg><small class="mu">Último: ${sim1(L[L.length-1]).pct.toFixed(1)}%</small>`:'<span class="mu">Registre simulados para acompanhar a evolução.</span>'}</div>`}
+function addQ(){const n=Math.floor(+$('#qn').value)||0,a=Math.floor(+$('#qa').value)||0,d=T();if(a>n)return alert('Os acertos não podem passar do total de questões.');const o=S.q[d]||{n:0,a:0};S.q[d]={n:o.n+n,a:o.a+a};save()}
+const DT=[['2026-10-28','Abertura das inscrições (vunesp.com.br). Pedido de redução da taxa de 28 a 30/10; envio de documentos de 28/10 a 03/11.'],['2026-11-25','Resultado dos pedidos de redução da taxa.'],['2026-11-26','Recursos contra o indeferimento da redução (26 a 30/11).'],['2026-12-10','Último dia para se inscrever (até 23h59). Resultado dos recursos da redução.'],['2026-12-11','Vencimento do boleto de R$ 81,00.'],['2027-01-07','Resultado dos pedidos de pessoa com deficiência, condição especial, negros, indígenas e quilombolas.'],['2027-01-08','Recursos contra esse indeferimento (08 a 12/01).'],['2027-01-22','Decisão dos recursos.'],['2027-03-13','Véspera da prova: último dia do cronograma.'],['2027-03-14','PROVA objetiva e redação, no mesmo dia, à tarde, com até 5 horas de duração.'],['2027-03-17','Divulgação do gabarito.']];
+function vDat(){const td=T(),nx=DT.find(x=>x[0]>=td);
+ return`<h2>Datas importantes</h2><div class="card sc"><table>${DT.map(x=>`<tr style="${x[0]==nx[0]&&nx?'background:#faf4e3':''}${x[0]<td?';opacity:.5':''}"><td style="white-space:nowrap"><b>${fm(x[0])}</b><br><small class="mu">${x[0]<td?'passou':x[0]==td?'hoje':'em '+diff(td,x[0])+' dias'}</small></td><td>${x[1]}</td></tr>`).join('')}<tr><td><b>A definir</b></td><td>Edital de convocação com local e horário da prova (Diário Eletrônico da Justiça e área do candidato no site da VUNESP; o SMS e o e-mail são apenas informativos) e resultado final.</td></tr></table>
+ <p class="mu"><small>Fonte: Edital de Abertura nº 02/2026 (2ª a 10ª Regiões Administrativas Judiciárias). Datas previstas podem mudar por edital. As provas são aplicadas na comarca sede de cada região.</small></p></div>`}
+function vPro(){return`<h2>Tudo sobre a prova</h2>
+ <div class="pen"><b class="big">Caneta esferográfica de tinta PRETA</b><p>O edital manda comparecer com caneta esferográfica de tinta preta (cap. IX, itens 10 e 19.4.5). A folha de respostas é lida por scanner e outra cor pode não ser detectada. A redação também é feita com tinta preta.</p><p><b>Leve duas ou mais canetas pretas.</b> Evite traço fraco ou claro. Lápis, corretivo e marca-texto não valem: na redação, corretivo e marca-texto geram nota zero e eliminação.</p><p><small>Observação: nos critérios de julgamento da redação o edital cita "preta ou azul-escura" como limite para não zerar o texto, mas a regra de comparecimento e a instrução da redação pedem preta. Use sempre preta.</small></p></div>
+ <div class="grid g2"><div class="card"><h3>O que levar</h3><ul><li><b>Documento de identidade original</b>, em bom estado: RG, CNH com foto, CTPS, passaporte, carteira de conselho de classe, carteira das Forças Armadas ou Polícias, RNE ou CIN. Também vale o documento digital pelo app do órgão emissor (RG, CNH, e-Título com foto, CIN).</li><li>Não valem cópia (mesmo autenticada), protocolo nem boletim de ocorrência.</li><li><b>Caneta esferográfica preta</b>, mais de uma.</li><li>Confirmação do local e horário no edital de convocação. Na prova de dez/2025 os portões abriram às 12h00 e fecharam às 12h40, com início às 13h00.</li></ul></div>
+ <div class="card"><h3>O que não levar ou deixar lacrado</h3><ul><li>Relógio de qualquer tipo, celular e aparelhos eletrônicos: desligados, com bateria retirada se possível, guardados na embalagem lacrada da VUNESP, sob a carteira.</li><li>Boné, gorro, chapéu, óculos de sol, protetor auricular e calculadora.</li><li>Livros, anotações e qualquer material de consulta.</li><li>Armas, mesmo com porte: eliminação.</li><li>Ao ir ao banheiro, só com fiscal e sem bolsas ou pertences.</li></ul></div></div>
+ <div class="grid g2"><div class="card"><h3>Estrutura da prova</h3><ul><li>70 questões de múltipla escolha, 5 alternativas, todas com o mesmo valor, e redação no mesmo dia.</li><li>Bloco I, Língua Portuguesa: 16 questões.</li><li>Bloco II, Direito: 30 questões.</li><li>Bloco III, Gerais: 24 questões (Atualidades 4, Matemática 4, Informática 9, Raciocínio Lógico 7).</li><li>Duração máxima de 5 horas, já com a transcrição das respostas. Só se pode sair após 2 horas, e os 3 últimos candidatos saem juntos.</li></ul></div>
+ <div class="card"><h3>Como se é aprovado</h3><ul><li>Nota mínima 5,0 na prova objetiva (35 acertos).</li><li>Blocos I e II eliminatórios: ao menos 50% em cada (8 de 16 e 15 de 30). O bloco III só classifica.</li><li>Redação vale 0 a 40 e é eliminatória: mínimo de 24 pontos (19,2 para vagas reservadas).</li><li>Só são corrigidas as redações dos candidatos mais bem colocados na objetiva da sua circunscrição (tabela no cap. XI do edital).</li><li>Desempate: 60 anos ou mais, mais acertos em Português, depois em Direito, e demais critérios do edital.</li></ul></div></div>
+ <div class="grid g2"><div class="card"><h3>Folha de respostas</h3><ul><li>Questão em branco, com duas marcações ou com rasura ou emenda não é computada, mesmo legível.</li><li>Nada de marcas fora dos campos de resposta e assinatura.</li><li>Não há tempo extra para transcrever as respostas depois do fim da prova.</li><li>Confira nome e documento no caderno pré-identificado e assine no local indicado.</li></ul></div>
+ <div class="card"><h3>Redação</h3><ul><li>Texto dissertativo-argumentativo em prosa, manuscrito, com letra legível e tinta preta.</li><li>Avaliação: tema, estrutura (posicionamento claro), língua e coesão.</li><li>Nota zero: fuga ao tema, 7 linhas ou menos, menos de 8 linhas autorais, cópia da coletânea ou de modelos prontos, nome ou sinal que identifique você, texto fora do espaço definitivo.</li><li>Rascunho e título não são avaliados. Evite 1ª pessoa do singular e referências aos textos de apoio. Proposta de intervenção não é exigida.</li></ul></div></div>
+ <div class="card"><h3>Informações gerais</h3><ul><li>Cargo: Escrevente Técnico Judiciário, formação de cadastro de reserva. Vencimento de R$ 6.782,54 (março/2026) mais auxílios, jornada de 40 horas semanais.</li><li>Inscrição de R$ 81,00 pelo site www.vunesp.com.br. Há possibilidade de redução de 50% nos casos do edital (cap. II).</li><li>Requisitos: ensino médio concluído e 18 anos até a posse, entre outros do edital.</li><li>Não há segunda chamada. Atraso ou falta elimina. Não há revisão de prova, só recursos no prazo.</li></ul></div>`}
+function render(){$('#nav').innerHTML=[['ini','Início'],['cro','Cronograma'],['con','Conteúdo'],['rev','Revisões'],['sim','Simulados'],['des','Desempenho'],['dat','Datas'],['pro','Prova']].map(([k,l])=>`<button class="${V.t==k?'on':''}" onclick="V.t='${k}';render();scrollTo(0,0)">${l}</button>`).join('');$('#main').innerHTML=({ini:vIni,cro:vCro,con:vCon,rev:vRev,sim:vSim,des:vDes,dat:vDat,pro:vPro})[V.t]()}
+$('#lg').innerHTML=LOGO;const icon='data:image/svg+xml,'+encodeURIComponent(LOGO);$('#fav').href=icon;
+try{$('#mf').href=URL.createObjectURL(new Blob([JSON.stringify({name:'Escrevente TJSP · Cronograma',short_name:'Escrevente',start_url:location.href,display:'standalone',background_color:'#f6f8fb',theme_color:'#1c2b4a',icons:[{src:icon,sizes:'any',type:'image/svg+xml'}]})],{type:'application/manifest+json'}))}catch(e){}
+render();
+</script></body></html>
